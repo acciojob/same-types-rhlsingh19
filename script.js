@@ -3,15 +3,22 @@ function isSameType(value1, value2) {
   if (isNaN(value1) && isNaN(value2)) {
     return true;
   }
+	if(typeof value1== "String"&& typeof value2 =="String"){
+		return true;
+	}
+	if(isNaN(value1)==false && isNaN(value2)==false){
+		return true;
+	}
+	return false;
 
   // Check if the types of the values are the same
-  return typeof value1 === typeof value2;
+  // return typeof value1 === typeof value2;
 }
 
-console.log(isSameType(1, 3)); // true
-console.log(isSameType("hey", "hello")); // true
-console.log(isSameType(NaN, NaN)); // true
-console.log(isSameType("3", 3)); // false
+// console.log(isSameType(1, 3)); // true
+// console.log(isSameType("hey", "hello")); // true
+// console.log(isSameType(NaN, NaN)); // true
+// console.log(isSameType("3", 3)); // false
 
 // do not change the code below.
 let value1 = prompt("Enter Start of the Range.");
